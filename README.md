@@ -34,18 +34,7 @@ Ogni libro ha:
   "available": true
 }
 ---
-### Middleware richiesti
-- Logger: stampa in console metodo e URL per ogni richiesta
-- Validazione: blocca POST e PUT se mancano title o author
-- Filtro per autore: GET /books?author=Eco (facoltativo)
-- Endpoint solo libri disponibili GET /books/available (facoltativo)
----
-#### *Cosa consegnare*
-- Progetto funzionante
-- Collection Postman
-- Codice organizzato e leggibile
-- README con istruzioni di avvio e test del progetto
----
+
 ## **Istruzioni di avvio**
 - Creato file app.js;
 - Inizializzato node tramite terminale (comando: "*node init -y*");
@@ -56,3 +45,24 @@ Ogni libro ha:
 - Attivato server locale su porta 10000 (*app.listen(port...)*);
 - Attivato refresh automatico del server attraverso terminale (comando: "*npm run dev*").
 ---
+
+## 📫 Test API con Postman
+
+Per testare le rotte REST di questa libreria, puoi usare la collection Postman fornita nel progetto.
+
+📁 Percorso:
+postman/libreria-API-test.json
+
+
+### ✅ Come importarla in Postman
+
+1. Apri [Postman](https://www.postman.com/)
+2. Vai su **"File" → "Import"**
+3. Seleziona il file `libreria-api-formattata.postman_collection.json` che si trova nella cartella `postman/`
+4. Clicca **Importa**
+5. Esegui i test sulle seguenti rotte locali:
+   - `GET http://localhost:10000/books`
+   - `POST http://localhost:10000/books`
+   - `PUT http://localhost:10000/books/:id`
+   - `DELETE http://localhost:10000/books/:id`
+
